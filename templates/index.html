@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Macro TrackerBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Upload Barcode to Scan</h2>
+    <form id="uploadForm">
+        <input type="file" id="fileInput" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="status"></div>
+    <div id="barcodeResults" class="results-container" style="display:none;"></div>
+
+    <h2>Paste Receipt to Parse</h2>
+    <textarea id="pasteArea" rows="10" cols="50" placeholder="Paste text here..."></textarea>
+    <button id="parseButton">Parse Receipt</button>
+    <div id="pasteStatus"></div>
+    <div id="receiptResults" class="results-container" style="display:none;"></div>
+
+    <h3>Press to Send to Google Sheets</h3>
+    <button id="sendSheetButton">Update Sheets</button>
+    <p id="sendSheetStatus"></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

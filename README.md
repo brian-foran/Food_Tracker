@@ -7,6 +7,7 @@ This simple Flask app accepts an image upload (multipart/form-data, field name `
 2. Save all uploaded receipts for backup price checking
 3. Upload all data from receipt, not just matches
 
+## Code Help
 Quick start (Windows PowerShell):
 
 ```powershell
